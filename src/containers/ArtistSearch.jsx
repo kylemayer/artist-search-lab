@@ -8,22 +8,18 @@ const ArtistSearch = () => {
   const [filteredArtists, setFilteredArtists] = useState([]);
 
   useEffect(() => {
-   const loadArtists = async () => {
-       const artistsFromApi = await getArtists();
-       setArtists(artistsFromApi);
-       setLoading(false);
-   };
+    const loadArtists = async () => {
+      const artistsFromApi = await getArtists();
+      setArtists(artistsFromApi);
+      setLoading(false);
+    };
 
-   loadArtists();
+    loadArtists();
+  }, []);
 
-    if (loading) return <h3>Loading...</h3>;
+  if (loading) return <h3>Loading...</h3>;
 
-    return (
-        <>
-
-        </>
-);
-
+  return <></>;
 };
 
 export default ArtistSearch;
