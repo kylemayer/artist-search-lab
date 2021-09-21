@@ -11,7 +11,6 @@ const Artist = ({ name }) => (
 
 Artist.propTypes = {
   name: PropTypes.string,
-
 };
 
 export default Artist;
