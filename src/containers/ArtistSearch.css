@@ -1,0 +1,32 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Operator mono', sans-serif;
+  }
+
+  ul > li {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #7e6382;
+    padding: 6px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }

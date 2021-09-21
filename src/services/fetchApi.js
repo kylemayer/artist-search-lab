@@ -14,3 +14,21 @@ export const getArtists = async (search) => {
   }
 };
 
+export const getReleases = async (artistId) => {
+  try {
+    const res = await fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`);
+    const { releases } = await res.json();
+
+    return releases.map(release => ({
+      id: release.id,
+      title: release.title
+    }))
+  } catch (error) {
+    console.error(`Error getting releases: ${error.message}`);
+  }
+};
+
+
+
+
+}
