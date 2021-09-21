@@ -28,7 +28,3 @@ export const getReleases = async (artistId) => {
   }
 };
 
-
-
-
-}

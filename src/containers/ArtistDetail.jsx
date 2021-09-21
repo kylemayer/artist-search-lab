@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReleaseList from '../components/displays/ReleaseList';
 import { getReleases } from '../services/fetchApi.js';
 import { useParams } from 'react-router-dom';
 
@@ -17,7 +18,7 @@ const ArtistDetail = () => {
 
   return (
     <>
-
+      <ReleaseList releases={releases} />
     </>
   );
 };
