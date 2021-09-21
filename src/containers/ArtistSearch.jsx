@@ -3,6 +3,7 @@ import { getArtists } from '../services/fetchApi.js';
 import Search from '../components/controls/Search';
 import ArtistList from '../components/displays/ArtistList';
 import Pagination from 'react-js-pagination';
+import styles from './ArtistSearch.css';
 
 const ArtistSearch = () => {
   const [loading, setLoading] = useState(true);
@@ -34,11 +35,17 @@ const ArtistSearch = () => {
   return (
     <>
       <Search searchTerm={searchTerm} onSearch={handleSearch} />
-      <Pagination 
-        activePage={activePage}
-        totalItemsCount={666}
-        onChange={handlePageChange}
-      />
+      <div className={styles.page}>
+        <Pagination
+          activePage={activePage}
+          totalItemsCount={666}
+          firstPageText="first"
+          lastPageText="last"
+          prevPageText="prev"
+          nextPageText="next"
+          onChange={handlePageChange}
+        />
+      </div>
       <ArtistList
         artists={artists}
         searchTerm={searchTerm}
