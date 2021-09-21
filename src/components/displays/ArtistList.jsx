@@ -3,17 +3,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Artist from './Artist';
 
-const ArtistList = ({ artists, filteredArtists, searchTerm }) => {
-  const artistsCatalog = filteredArtists.length ? filteredArtists : artists;
+const ArtistList = ({ artists, searchTerm }) => {
 
-  if (searchTerm && !filteredArtists.length)
+  if (searchTerm && !artists.length)
     return <h4>No artists available</h4>;
 
   return (
     <ul aria-label="artists">
-      {artistsCatalog.map((artist) => (
+      {artists.length > 0 && artists.map((artist) => (
         <li key={artist.id}>
-          <Artist {...artists} />
+          <Artist {...artist} />
         </li>
       ))}
     </ul>
@@ -22,17 +21,14 @@ const ArtistList = ({ artists, filteredArtists, searchTerm }) => {
 
 const artistsProp = PropTypes.arrayOf(
   PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    area: PropTypes.string.isRequired,
+    id: PropTypes.string,
+    name: PropTypes.string,
   })
-).isRequired;
+);
 
 ArtistList.propTypes = {
   artists: artistsProp,
-  filteredArtists: artistsProp,
-  searchTerm: PropTypes.string.isRequired,
+  searchTerm: PropTypes.string,
 };
 
 export default ArtistList;
