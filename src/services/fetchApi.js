@@ -13,3 +13,4 @@ export const getArtists = async (search) => {
     console.error(`Error getting artists: ${error.message}`);
   }
 };
+
