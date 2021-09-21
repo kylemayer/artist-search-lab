@@ -19,11 +19,23 @@ const ArtistSearch = () => {
     loadArtists();
   }, []);
 
+  useEffect(() => {
+    setFilteredArtists(
+      artists.filter((artist) =>
+        artist.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
+  }, [searchTerm]);
+
+  const handleSearch = ({ target }) => {
+    setSearchTerm(target.value);
+  };
+
   if (loading) return <h3>Loading...</h3>;
 
   return (
     <>
-      <Search searchTerm={searchTerm} />
+      <Search searchTerm={searchTerm} onSearch={handleSearch} />
       <ArtistList
         artists={artists}
         searchTerm={searchTerm}
