@@ -1,6 +1,6 @@
 import React from 'react';
-import ArtistList from '../../containers/ArtistSearch';
+import ArtistSearch from '../../containers/ArtistSearch';
 
 export default function App() {
-  return <ArtistList />;
+  return <ArtistSearch />;
 }
