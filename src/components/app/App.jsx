@@ -1,5 +1,6 @@
 import React from 'react';
+import ArtistSearch from '../../containers/ArtistSearch';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <ArtistSearch />;
 }
