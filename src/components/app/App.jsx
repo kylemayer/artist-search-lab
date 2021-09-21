@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ArtistSearch from '../../containers/ArtistSearch';
-import Artist from '../displays/Artist';
+import ArtistDetail from '../../containers/ArtistDetail';
 import ArtistList from '../displays/ArtistList';
 import Release from '../displays/Release';
 import ReleaseList from '../displays/ReleaseList';
@@ -14,8 +14,8 @@ export default function App() {
           <Route exact path="/">
             <ArtistSearch />
           </Route>
-          <Route exact path="/artists/:id">
-            <Artist />
+          <Route exact path="/artist/:id">
+            <ArtistDetail />
           </Route>
           <Route exact path="/artists">
             <ArtistList />

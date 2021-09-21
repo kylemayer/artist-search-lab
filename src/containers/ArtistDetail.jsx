@@ -12,7 +12,7 @@ const ArtistDetail = () => {
     getReleases(id)
       .then((res) => setReleases(res))
       .finally(() => setLoading(false));
-  }, []);
+  }, [id]);
 
   if (loading) return <h3>Loading...</h3>;
 

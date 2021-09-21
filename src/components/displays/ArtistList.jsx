@@ -12,7 +12,7 @@ const ArtistList = ({ artists, searchTerm }) => {
       {artists.length > 0 &&
         artists.map((artist) => (
           <li key={artist.id}>
-            <Link to={`/${artist.id}`}>
+            <Link to={`/artist/${artist.id}`}>
               <Artist {...artist} />
             </Link>
           </li>

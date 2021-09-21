@@ -8,7 +8,7 @@ const ReleaseList = ({ releases }) => (
     {releases.map((release) => (
       <li key={release.id}>
         <Link to={`/${release.id}`}>
-          <Release id={release.id} title={release.title} />
+          <Release id={release.id} title={release.title} cover={release.cover} />
         </Link>
       </li>
     ))}
@@ -20,6 +20,7 @@ ReleaseList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
+      cover: PropTypes.string.isRequired,
     }).isRequired
   ),
 };
