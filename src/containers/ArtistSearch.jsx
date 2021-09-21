@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getArtists } from '../services/fetchApi.js';
+import Search from '../components/controls/Search';
+import ArtistList from '../components/displays/ArtistList';
 
 const ArtistSearch = () => {
   const [loading, setLoading] = useState(true);
@@ -19,7 +21,16 @@ const ArtistSearch = () => {
 
   if (loading) return <h3>Loading...</h3>;
 
-  return <></>;
+  return (
+    <>
+      <Search searchTerm={searchTerm} />
+      <ArtistList
+        artists={artists}
+        searchTerm={searchTerm}
+        filteredArtists={filteredArtists}
+      />
+    </>
+  );
 };
 
 export default ArtistSearch;
