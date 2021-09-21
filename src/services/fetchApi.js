@@ -1,4 +1,4 @@
-export const getArtists = async () => {
+export const getArtists = async (search) => {
   try {
     const res = await fetch(
       `http://musicbrainz.org/ws/2/artist?query=${search}&fmt=json&limit=25`
