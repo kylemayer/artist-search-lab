@@ -13,7 +13,7 @@ const ArtistList = ({ artists, filteredArtists, searchTerm }) => {
     <ul aria-label="artists">
       {artistsCatalog.map((artist) => (
         <li key={artist.id}>
-          <Artist {...artists} />
+          <Artist {...artist} />
         </li>
       ))}
     </ul>
@@ -22,17 +22,15 @@ const ArtistList = ({ artists, filteredArtists, searchTerm }) => {
 
 const artistsProp = PropTypes.arrayOf(
   PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    area: PropTypes.string.isRequired,
+    id: PropTypes.string,
+    name: PropTypes.string,
   })
-).isRequired;
+);
 
 ArtistList.propTypes = {
   artists: artistsProp,
   filteredArtists: artistsProp,
-  searchTerm: PropTypes.string.isRequired,
+  searchTerm: PropTypes.string,
 };
 
 export default ArtistList;
