@@ -43,7 +43,6 @@ export const getSongs = async (releaseId) => {
   try {
     const res = await fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`);
     const { recordings } = await res.json();
-console.log('------', recordings);
     return recordings.map((song) => ({
       id: song.id,
       title: song.title
@@ -53,4 +52,13 @@ console.log('------', recordings);
   }
 };
 
-
+export const getLyrics = async (artist, title) => {
+  try {
+    const res = await fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`);
+    const { lyrics } = await res.json();
+console.log('------', lyrics);
+    return lyrics;
+  } catch (error) {
+    console.error(`Error getting songs: ${error.message}`);
+  }
+};
