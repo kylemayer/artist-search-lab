@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReleaseList from '../components/displays/ReleaseList';
 import { getReleases } from '../services/fetchApi.js';
 import { useParams } from 'react-router-dom';
+import styles from '../components/styles/ArtistDetail.css';
 
 const ArtistDetail = () => {
   const { id, artist } = useParams();
@@ -17,9 +18,9 @@ const ArtistDetail = () => {
   if (loading) return <h3>Loading...</h3>;
 
   return (
-    <>
+    <div className={styles.releaselist}>
       <ReleaseList releases={releases} artist={artist} />
-    </>
+    </div>
   );
 };
 

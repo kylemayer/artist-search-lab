@@ -1,0 +1,15 @@
+figure {
+  background-color: #7e6382;
+}
+
+figcaption {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+  background-color: #7e6382;
+}

@@ -3,7 +3,7 @@ import { getArtists } from '../services/fetchApi.js';
 import Search from '../components/controls/Search';
 import ArtistList from '../components/displays/ArtistList';
 import Pagination from 'react-js-pagination';
-import styles from './ArtistSearch.css';
+import styles from '../components/styles/ArtistSearch.css';
 
 const ArtistSearch = () => {
   const [loading, setLoading] = useState(true);
@@ -33,9 +33,9 @@ const ArtistSearch = () => {
   if (loading) return <h3>Loading...</h3>;
 
   return (
-    <>
+    <div className={styles.artistsearch}>
       <Search searchTerm={searchTerm} onSearch={handleSearch} />
-      <div className={styles.page}>
+      <div>
         <Pagination
           activePage={activePage}
           totalItemsCount={666}
@@ -50,7 +50,7 @@ const ArtistSearch = () => {
         artists={artists}
         searchTerm={searchTerm}
       />
-    </>
+    </div>
   );
 };
 
