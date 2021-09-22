@@ -4,7 +4,7 @@ import { getReleases } from '../services/fetchApi.js';
 import { useParams } from 'react-router-dom';
 
 const ArtistDetail = () => {
-  const { id } = useParams();
+  const { id, artist } = useParams();
   const [loading, setLoading] = useState(true);
   const [releases, setReleases] = useState([]);
 
@@ -18,7 +18,7 @@ const ArtistDetail = () => {
 
   return (
     <>
-      <ReleaseList releases={releases} />
+      <ReleaseList releases={releases} artist={artist} />
     </>
   );
 };

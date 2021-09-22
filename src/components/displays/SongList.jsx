@@ -7,7 +7,7 @@ const SongList = ({ songs, artist }) => (
   <ul aria-label="songs">
     {songs.map(({ id, title }) => (
       <li key={id}>
-        <Link to={`/releases/${artist}/${id}`}>
+        <Link to={`/lyrics/${artist}/${title}`}>
           <Song id={id} title={title}  />
         </Link>
       </li>
@@ -22,7 +22,7 @@ SongList.propTypes = {
       title: PropTypes.string.isRequired,
     }).isRequired
   ),
-  artist: PropTypes.string,
+  artist: PropTypes.string.isRequired,
 };
 
 export default SongList;
