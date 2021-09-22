@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import styles from '../styles/Resources.css';
 
 const Release = ({ title, cover }) => (
   <figure>
-    <img src={cover} alt={title} />
+    <img src={cover} alt={title} width="300px" />
     <figcaption>
       <h3>{title}</h3>
     </figcaption>

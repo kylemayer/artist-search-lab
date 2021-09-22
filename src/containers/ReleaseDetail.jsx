@@ -12,7 +12,7 @@ const ReleaseDetail = () => {
     getSongs(id)
       .then((res) => setSongs(res))
       .finally(() => setLoading(false));
-  }, [id]);
+  }, []);
 
   if (loading) return <h3>Loading...</h3>;
 
