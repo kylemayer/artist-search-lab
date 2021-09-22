@@ -7,7 +7,7 @@ const ReleaseList = ({ releases }) => (
   <ul aria-label="releases">
     {releases.map((release) => (
       <li key={release.id}>
-        <Link to={`/${release.id}`}>
+        <Link to={`/release/${release.id}`}>
           <Release id={release.id} title={release.title} cover={release.cover} />
         </Link>
       </li>

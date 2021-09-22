@@ -29,5 +29,18 @@ export const getReleases = async (artistId) => {
   }
 };
 
+export const getSongs = async (releaseId) => {
+  try {
+    const res = await fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`);
+    const { songs } = await res.json();
+
+    return songs.map((song) => ({
+      id: song.id,
+      title: song.title
+    }));
+  } catch (error) {
+    console.error(`Error getting songs: ${error.message}`);
+  }
+};
 
 
