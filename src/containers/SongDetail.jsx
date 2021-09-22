@@ -9,7 +9,7 @@ const SongDetail = () => {
   const [lyrics, setLyrics] = useState([]);
 
   useEffect(() => {
-    getLyrics(title, artist)
+    getLyrics(artist, title)
       .then((res) => setLyrics(res))
       .finally(() => setLoading(false));
   }, []);
