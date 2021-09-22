@@ -29,12 +29,22 @@ export const getReleases = async (artistId) => {
   }
 };
 
+// export const getAlbumArt = async (releaseId) => {
+//   try {
+//     const res = await fetch(`http://coverartarchive.org/release/${releaseId}/front`);
+//     const { covers } = await res.json();
+
+//   } catch (error) {
+
+//   }
+// };
+
 export const getSongs = async (releaseId) => {
   try {
     const res = await fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`);
-    const { songs } = await res.json();
-
-    return songs.map((song) => ({
+    const { recordings } = await res.json();
+console.log('------', recordings);
+    return recordings.map((song) => ({
       id: song.id,
       title: song.title
     }));

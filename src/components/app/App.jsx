@@ -15,7 +15,7 @@ export default function App() {
           <Route exact path="/artist/:id">
             <ArtistDetail />
           </Route>
-          <Route exact path="/releases/:artist/:id">
+          <Route exact path="/releases/:id">
             <ReleaseDetail />
           </Route>
         </Switch>
