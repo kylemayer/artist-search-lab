@@ -2,54 +2,31 @@ import React, { useState, useEffect } from 'react';
 import { getArtists } from '../services/fetchApi.js';
 import Search from '../components/controls/Search';
 import ArtistList from '../components/displays/ArtistList';
-import Pagination from 'react-js-pagination';
 import styles from '../components/styles/ArtistSearch.css';
+import Paginate from '../components/controls/Pagination.jsx';
 
 const ArtistSearch = () => {
-  const [loading, setLoading] = useState(true);
   const [artists, setArtists] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activePage, setActivePage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState('g');
+  const [offSet, setOffset] = useState(0);
 
   useEffect(() => {
-    const loadArtists = async () => {
-      if(!searchTerm) return setLoading(false);
-      const artistsFromApi = await getArtists(searchTerm);
-      setArtists(artistsFromApi);
-      setLoading(false);
-    };
-
-    loadArtists();
-  }, [searchTerm]);
+    if (!searchTerm) return getArtists(searchTerm, offSet).then((res) => setArtists(res));
+  }, [offSet, searchTerm]);
 
   const handleSearch = ({ target }) => {
     setSearchTerm(target.value);
   };
 
-  const handlePageChange = (pageNumber) => {
-    setActivePage(pageNumber);
+  const updateOffset = (number) => {
+    setOffset((prevPage) => prevPage + number);
   };
-
-  if (loading) return <h3>Loading...</h3>;
 
   return (
     <div className={styles.artistsearch}>
       <Search searchTerm={searchTerm} onSearch={handleSearch} />
-      <div>
-        <Pagination
-          activePage={activePage}
-          totalItemsCount={666}
-          firstPageText="first"
-          lastPageText="last"
-          prevPageText="prev"
-          nextPageText="next"
-          onChange={handlePageChange}
-        />
-      </div>
-      <ArtistList
-        artists={artists}
-        searchTerm={searchTerm}
-      />
+      <Paginate offSet={offSet} artists={artists} updateOffset={updateOffset} />
+      {artists.length && <ArtistList artists={artists} />}
     </div>
   );
 };
