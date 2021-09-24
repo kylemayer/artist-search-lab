@@ -11,7 +11,7 @@ const ArtistSearch = () => {
   const [offSet, setOffset] = useState(0);
 
   useEffect(() => {
-    if (!searchTerm) return getArtists(searchTerm, offSet).then((res) => setArtists(res));
+    if (searchTerm) return getArtists(searchTerm, offSet).then((res) => setArtists(res));
   }, [offSet, searchTerm]);
 
   const handleSearch = ({ target }) => {
