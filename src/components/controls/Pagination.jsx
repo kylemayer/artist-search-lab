@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Paginate = ({ artists, offset, updateOffset }) => {
+const Paginate = ({ artists, offSet, updateOffset }) => {
   return (
     <>
-      <button onClick={() => updateOffset(-25)} disabled={offset === 0}>
+      <button onClick={() => updateOffset(-25)} disabled={offSet === 0}>
         &larr;
       </button>
       <button onClick={() => updateOffset(25)} disabled={artists.length < 25}>
@@ -15,7 +15,7 @@ const Paginate = ({ artists, offset, updateOffset }) => {
 };
 
 Paginate.propTypes = {
-  offset: PropTypes.number.isRequired,
+  offSet: PropTypes.number.isRequired,
   updateOffset: PropTypes.func.isRequired,
   artists: PropTypes.arrayOf(
     PropTypes.shape({

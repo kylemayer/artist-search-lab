@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistSearch should display a list of asrtists that match the searched term 1`] = `
+<div>
+  <div
+    class="artistsearch"
+  >
+    <label>
+      Search for an artist
+      <input
+        aria-label="searchBar"
+        name="searchTerm"
+        role="searchBar"
+        type="text"
+        value="butthole"
+      />
+    </label>
+    <button
+      disabled=""
+    >
+      ←
+    </button>
+    <button
+      disabled=""
+    >
+      →
+    </button>
+    <ul
+      aria-label="artists"
+    >
+      <li>
+        <a
+          href="/artists/Butthole Surfers/2339bc21-aa92-4850-86f0-4bb9433910c8"
+        >
+          <figure>
+            <figcaption>
+              <h3>
+                Butthole Surfers
+              </h3>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/artists/Butthole Cruisers/bf6610b0-4d03-49ef-af36-76602eb859de"
+        >
+          <figure>
+            <figcaption>
+              <h3>
+                Butthole Cruisers
+              </h3>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/artists/Butthole Blowhole/1d9d1856-aef9-4a2c-968d-fcd323a119c4"
+        >
+          <figure>
+            <figcaption>
+              <h3>
+                Butthole Blowhole
+              </h3>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/artists/Brendan/fd3e84c8-0ebd-4fad-8396-35644c29e6fc"
+        >
+          <figure>
+            <figcaption>
+              <h3>
+                Brendan
+              </h3>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/artists/Multiple Buttholes/87035eaf-5886-48c5-ab2f-554edcf2fadf"
+        >
+          <figure>
+            <figcaption>
+              <h3>
+                Multiple Buttholes
+              </h3>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

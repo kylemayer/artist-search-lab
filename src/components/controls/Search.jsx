@@ -9,6 +9,8 @@ const Search = ({ searchTerm, onSearch }) => (
       name="searchTerm"
       value={searchTerm}
       onChange={onSearch}
+      aria-label="searchBar"
+      role="searchBar"
     />
   </label>
 );

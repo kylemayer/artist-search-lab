@@ -7,11 +7,11 @@ import Paginate from '../components/controls/Pagination.jsx';
 
 const ArtistSearch = () => {
   const [artists, setArtists] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('g');
+  const [searchTerm, setSearchTerm] = useState('');
   const [offSet, setOffset] = useState(0);
 
   useEffect(() => {
-    if (!searchTerm) return getArtists(searchTerm, offSet).then((res) => setArtists(res));
+    if (searchTerm) return getArtists(searchTerm, offSet).then((res) => setArtists(res));
   }, [offSet, searchTerm]);
 
   const handleSearch = ({ target }) => {
