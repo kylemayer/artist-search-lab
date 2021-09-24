@@ -1,0 +1,159 @@
+{
+    "created": "2021-09-24T17:48:52.178Z",
+    "count": 5,
+    "offset": 0,
+    "artists": [
+        {
+            "id": "2339bc21-aa92-4850-86f0-4bb9433910c8",
+            "type": "Group",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "score": 100,
+            "name": "Butthole Surfers",
+            "sort-name": "Butthole Surfers",
+            "country": "US",
+            "area": {
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "type": "Country",
+                "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                "name": "United States",
+                "sort-name": "United States",
+                "life-span": {
+                    "ended": null
+                }
+            },
+            "begin-area": {
+                "id": "a6f7157a-bfab-49e8-a22b-240ade4552ca",
+                "type": "City",
+                "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                "name": "San Antonio",
+                "sort-name": "San Antonio",
+                "life-span": {
+                    "ended": null
+                }
+            },
+            "isnis": [
+                "0000000123593310"
+            ],
+            "life-span": {
+                "begin": "1982",
+                "ended": null
+            },
+            "aliases": [
+                {
+                    "sort-name": "BH Surfers",
+                    "name": "BH Surfers",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                },
+                {
+                    "sort-name": "Butthole Sufers",
+                    "name": "Butthole Sufers",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                }
+            ],
+            "tags": [
+                {
+                    "count": 1,
+                    "name": "alternative rock"
+                },
+                {
+                    "count": 1,
+                    "name": "punk"
+                },
+                {
+                    "count": 1,
+                    "name": "alternative"
+                },
+                {
+                    "count": 1,
+                    "name": "psychedelic rock"
+                },
+                {
+                    "count": 1,
+                    "name": "experimental rock"
+                },
+                {
+                    "count": 1,
+                    "name": "art punk"
+                },
+                {
+                    "count": 1,
+                    "name": "noise rock"
+                }
+            ]
+        },
+        {
+            "id": "bf6610b0-4d03-49ef-af36-76602eb859de",
+            "score": 89,
+            "name": "Butthole Cruisers",
+            "sort-name": "Butthole Cruisers",
+            "life-span": {
+                "ended": null
+            }
+        },
+        {
+            "id": "1d9d1856-aef9-4a2c-968d-fcd323a119c4",
+            "type": "Group",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "score": 89,
+            "name": "Butthole Blowhole",
+            "sort-name": "Butthole Blowhole",
+            "country": "US",
+            "area": {
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "type": "Country",
+                "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                "name": "United States",
+                "sort-name": "United States",
+                "life-span": {
+                    "ended": null
+                }
+            },
+            "disambiguation": "goregrind",
+            "life-span": {
+                "ended": null
+            }
+        },
+        {
+            "id": "fd3e84c8-0ebd-4fad-8396-35644c29e6fc",
+            "type": "Person",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "score": 49,
+            "name": "Brendan",
+            "sort-name": "Brendan",
+            "disambiguation": "member of Butthole Blowhole",
+            "life-span": {
+                "ended": null
+            }
+        },
+        {
+            "id": "87035eaf-5886-48c5-ab2f-554edcf2fadf",
+            "type": "Group",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "score": 48,
+            "name": "Multiple Buttholes",
+            "sort-name": "Multiple Buttholes",
+            "area": {
+                "id": "76d1e078-7861-4329-8553-f047b922c4f7",
+                "type": "City",
+                "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                "name": "Blacksburg",
+                "sort-name": "Blacksburg",
+                "life-span": {
+                    "ended": null
+                }
+            },
+            "disambiguation": "Blacksburg, VA Band",
+            "life-span": {
+                "ended": null
+            }
+        }
+    ]
+}
